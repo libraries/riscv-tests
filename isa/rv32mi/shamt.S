@@ -1,10 +1,10 @@
 # See LICENSE for license details.
 
 #*****************************************************************************
-# csr.S
+# shamt.S
 #-----------------------------------------------------------------------------
 #
-# Test CSRRx and CSRRxI instructions.
+# Test illegal shamt[5] of shift instruction in 32-bit ISA.
 #
 
 #include "riscv_test.h"
@@ -21,6 +21,7 @@ RVTEST_CODE_BEGIN
 
   TEST_PASSFAIL
 
+.align 2
 .global mtvec_handler
 mtvec_handler:
   # Trapping on test 3 is good.
